@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
   <!-- SEO Meta Tags -->
-  <title>Nihal Saini | Web Developer & UI/UX Designer | Portfolio</title>
+  <title>Nihal Saini | Full-Satck Developer & UI/UX Designer | Portfolio</title>
   <meta name="description"
     content="Nihal Saini – Full-Stack Developer and UI/UX Designer building responsive and modern web applications, expertise in Python, C, and JavaScript. Visit my portfolio website." />
   <meta name="keywords"
@@ -109,6 +109,10 @@
       border-bottom: none;
     }
 
+    h1 {
+      color: black;
+    }
+
     h2 {
       font-size: 2.2rem;
       font-weight: 600;
@@ -144,7 +148,7 @@
 
     .hero-content .badge {
       background: #0a192f;
-      color: #00f7ff;
+      color: #ffffff;
       padding: 0.2rem 1rem;
       border-radius: 30px;
       font-size: 0.85rem;
@@ -163,7 +167,7 @@
 
     .hero-content h1 span {
       color: #0a192f;
-      background: linear-gradient(120deg, #2667ff 0%, #000000 80%);
+      background: linear-gradient(120deg, #000000 0%, #2667ff 80%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -353,7 +357,12 @@
       display: flex;
       gap: 2.5rem;
       flex-wrap: wrap;
+      color: white;
       align-items: center;
+    }
+
+    .about-highlight {
+      color: black;
     }
 
     .about-text {
@@ -368,7 +377,7 @@
       background: white;
       padding: 1.5rem 2rem;
       border-radius: 24px;
-      border-left: 8px solid #64ffda;
+      border-left: 8px solid #ffdd00;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     }
 
@@ -462,7 +471,7 @@
     }
 
     .social-links a:hover {
-      color: #64ffda;
+      color: #ffd000;
     }
 
     /* responsive */
@@ -549,15 +558,15 @@
         <div class="hero-content">
           <div class="badge"><i class="fas fa-code"></i> Web Developer</div>
           <h1>Hi, I’m <span>Nihal Saini</span></h1>
-          <p>Frontend Web Developer passionate about creating modern, responsive and user-friendly web applications.</p>
+          <p>Full-Stack Developer & UI/UX Designer passionate about creating modern, responsive and user-friendly web
+            applications.</p>
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Let’s talk</a>
+            <a href="#contact" class="btn btn-primary"> Connect</a>
             <a href="#projects" class="btn btn-outline">See work</a>
           </div>
         </div>
         <div class="hero-avatar">
-          <img src="https://ui-avatars.com/api/?name=John+Doe&size=180&background=0a192f&color=64ffda&bold=true"
-            alt="John Doe avatar" />
+          <img src="assets/images/profile-img.jpeg" alt="Nihal Saini" />
         </div>
       </div>
     </section>
@@ -570,12 +579,15 @@
         <div class="skills-grid">
           <div class="skill-item"><i class="fab fa-python"></i> Python</div>
           <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+          <div class="skill-item"><i class="fas fa-html"></i> HTML</div>
+          <div class="skill-item"><i class="fas fa-css"></i> CSS</div>
+          <div class="skill-item"><i class="fas fa-javascript"></i> JavaScript</div>
           <div class="skill-item"><i class="fab fa-react"></i> React</div>
           <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
           <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
-          <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
           <div class="skill-item"><i class="fas fa-cloud"></i> Serverless</div>
           <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+          <div class="skill-item"><i class="fab fa-github-alt"></i> GitHub</div>
         </div>
       </div>
     </section>
@@ -583,29 +595,34 @@
     <!-- projects -->
     <section id="projects">
       <div class="container">
-        <h2>📁 Projects</h2>
-        <p class="section-sub">Selected work that reflects my approach and craft</p>
+        <h2>Projects</h2>
+        <p class="section-sub">Currently building projects and improving practical web development skills through
+          continuous learning and hands-on development.</p>
         <div class="projects-grid">
           <div class="project-card">
-            <i class="fas fa-cloud-upload-alt"></i>
-            <h3>AI Content Hub</h3>
-            <p>Serverless CMS with AI summaries, built on AWS Lambda & React.</p>
+            <!-- <i class="fas fa-chatbot-alt"></i> -->
+            <h3>AI Chatbot</h3>
+            <p>Personal Artificial Intelligent Chatbot with modern User Interface and Intelligent responsive system.</p>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">SQL</span>
             <span class="project-tag">React</span>
-            <span class="project-tag">AWS</span>
           </div>
           <div class="project-card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Analytics Dashboard</h3>
-            <p>Real-time dashboard with Node.js, WebSockets and D3 visualizations.</p>
-            <span class="project-tag">Node</span>
-            <span class="project-tag">D3</span>
+            <!-- <i class="fas fa-store"></i> -->
+            <h3>E-Commerce Website</h3>
+            <p>Responsive E-Shopping website with showing progress functionality based on mordern User Interface.</p>
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
           </div>
           <div class="project-card">
-            <i class="fas fa-store"></i>
-            <h3>EcoShop API</h3>
-            <p>GraphQL API with JWT auth, PostgreSQL, deployed on AWS ECS.</p>
-            <span class="project-tag">GraphQL</span>
-            <span class="project-tag">PostgreSQL</span>
+            <!-- <i class="fas fa-chart-line"></i> -->
+            <h3>Blog Website</h3>
+            <p>Clean User Interface with smooth navigation & user friendly experience designed for organized content
+              presentation across desktop and mobile devices.</p>
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
           </div>
         </div>
       </div>
@@ -614,27 +631,8 @@
     <!-- experience -->
     <section id="experience">
       <div class="container">
-        <h2>💼 Experience</h2>
+        <h2>Experience</h2>
         <p class="section-sub">Where I’ve applied my skills to deliver impact</p>
-        <div class="exp-item">
-          <div class="exp-icon"><i class="fas fa-building"></i></div>
-          <div class="exp-content">
-            <h3>Senior Full‑Stack Developer</h3>
-            <div class="company">CloudVantage · Remote</div>
-            <div class="date">2022 – present</div>
-            <p>Architected microservices on AWS, led frontend team migrating to React 18. Improved performance by 35%.
-            </p>
-          </div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><i class="fas fa-laptop-code"></i></div>
-          <div class="exp-content">
-            <h3>Full‑Stack Engineer</h3>
-            <div class="company">DataFlow Inc. · San Francisco</div>
-            <div class="date">2019 – 2022</div>
-            <p>Built and maintained APIs and dashboards for fintech clients. Introduced CI/CD with GitHub Actions.</p>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -642,15 +640,15 @@
     <section id="about">
       <div class="container about-wrap">
         <div class="about-text">
-          <h2>👤 About Me</h2>
+          <h2>About Me</h2>
           <p>I’m a full‑stack developer who loves bridging the gap between elegant design and robust infrastructure.
             With a background in computer science and a passion for clean code, I’ve worked with startups and scale‑ups
             to ship products that matter.</p>
           <div class="about-highlight">
-            <i class="fas fa-quote-left" style="color:#64ffda; margin-right:6px;"></i>
+            <i class="fas fa-quote-left" style="color:#000000; margin-right:6px;"></i>
             I believe in continuous learning, open source, and building with empathy for the end‑user.
           </div>
-          <p style="margin-top:1.5rem;"><i class="fas fa-map-pin" style="color:#0a192f;"></i> Based in Berlin · open to
+          <p style="margin-top:1.5rem;"><i class="fas fa-map  -pin" style="color:#ffffff;"></i> Based in India · Open to
             remote collaborations</p>
         </div>
       </div>
@@ -659,14 +657,14 @@
     <!-- contact -->
     <section id="contact">
       <div class="container">
-        <h2>📬 Contact</h2>
+        <h2>Contact</h2>
         <p class="section-sub">Let’s create something remarkable together.</p>
         <div class="contact-grid">
           <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> john@johndoe.dev</p>
-            <p><i class="fas fa-phone-alt"></i> +49 30 1234567</p>
-            <p><i class="fab fa-github"></i> github.com/johndoe</p>
-            <p><i class="fab fa-linkedin"></i> linkedin.com/in/johndoe</p>
+            <p><i class="fas fa-envelope"></i>connect.nihalsainee@gmail.com</p>
+            <p><i class="fas fa-phone-alt"></i> +91 1800-747-207</p>
+            <p><i class="fab fa-github"></i> github.com/nihalsainee</p>
+            <p><i class="fab fa-linkedin"></i> linkedin.com/in/nihalsainee</p>
           </div>
           <div class="contact-form">
             <form id="contactForm">
@@ -684,12 +682,11 @@
   <footer>
     <div class="container">
       <div class="social-links">
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://github.com/nihalsainee" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/nihalsainee" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://x.com/nihalsainee" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://youtube.com/@nihalsainee" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
       </div>
-      <p>&copy; 2026 John Doe — crafted with <i class="fas fa-heart" style="color:#64ffda;"></i> and AWS</p>
     </div>
   </footer>
 
