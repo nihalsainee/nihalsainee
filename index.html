@@ -6,45 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
 
   <!-- ===== ADVANCED SEO ===== -->
-  <title>Nihal Saini | Full-Stack Developer &amp; UI/UX Designer</title>
+  <title>Nihal Saini | Professional Website Builder &amp; UI/UX Designer</title>
   <meta name="description"
-    content="Nihal Saini is a Full-Stack Developer and UI/UX Designer passionate about building modern, scalable, and user-friendly digital experiences. With expertise in JavaScript, Python, C++, web technologies, and problem-solving, he focuses on creating responsive applications, intuitive interfaces, and innovative solutions powered by technology and artificial intelligence. Constantly learning and evolving, Nihal aims to develop impactful products that solve real-world challenges and deliver exceptional user experiences." />
+    content="Nihal Saini - Professional Website Builder offering custom website design, development, and digital solutions for businesses. Get your dream website built with modern technologies and stunning UI/UX." />
   <meta name="keywords"
-    content="Nihal Saini, nihalsainee, Full-Stack Developer, Full Stack Developer India, Web Developer, Frontend Developer, Backend Developer, UI/UX Designer, JavaScript Developer, Python Developer, C++ Developer, React Developer, Software Developer, Problem Solver, Artificial Intelligence, AI Enthusiast, AI Developer, Responsive Web Design, Modern Web Applications, User Experience Design, User Interface Design, Portfolio Website, Developer Portfolio, Tech Enthusiast, Software Engineer, Web Application Development, Cloud Computing, AWS, Frontend Engineering, Full Stack Engineering" />
+    content="website builder, professional website, custom website design, web development, UI/UX design, business website, portfolio website, e-commerce website, Nihal Saini, website developer India" />
   <meta name="author" content="Nihal Saini" />
   <link rel="canonical" href="https://www.nihalsainee.me" />
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Nihal Saini | Full-Stack Developer & UI/UX Designer" />
+  <meta property="og:title" content="Nihal Saini | Professional Website Builder" />
   <meta property="og:description"
-    content="Nihal Saini is a Full-Stack Developer and UI/UX Designer passionate about building modern, scalable, and user-friendly digital experiences." />
+    content="Get your dream website built with modern technologies, stunning design, and professional UI/UX. Custom websites for businesses, portfolios, and e-commerce." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.nihalsainee.me" />
-  <meta property="og:image" content="https://www.nihalsainee.me/assets/images/og-image.jpg" />
   <meta name="theme-color" content="#0a192f" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nihal Saini | Full-Stack Developer & UI/UX Designer" />
-  <meta name="twitter:description"
-    content="Full-Stack Developer & UI/UX Designer passionate about modern, scalable, and user-friendly digital experiences." />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Nihal Saini",
-      "jobTitle": "Full-Stack Developer & UI/UX Designer",
+      "@type": "ProfessionalService",
+      "name": "Nihal Saini - Website Builder",
+      "description": "Professional website building services for businesses and individuals.",
       "url": "https://www.nihalsainee.me",
-      "sameAs": [
-        "https://github.com/nihalsainee",
-        "https://linkedin.com/in/nihalsainee",
-        "https://x.com/nihalsainee",
-        "https://youtube.com/@nihalsainee",
-        "https://instagram.com/nihalsainee"
-      ],
-      "description": "Full-Stack Developer and UI/UX Designer passionate about building modern, scalable, and user-friendly digital experiences."
+      "priceRange": "$500 - $5000",
+      "serviceType": "Website Development"
     }
   </script>
 
@@ -57,6 +44,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <style>
+    /* ===== RESET & BASE ===== */
     * {
       margin: 0;
       padding: 0;
@@ -78,20 +66,31 @@
       padding: 0 1.8rem;
     }
 
-    /* ===== GLOW & ANIMATION UTILITIES ===== */
+    /* ===== ANIMATIONS ===== */
     .float-anim {
       animation: float 6s ease-in-out infinite;
     }
 
     @keyframes float {
-
       0%,
       100% {
         transform: translateY(0px);
       }
-
       50% {
         transform: translateY(-12px);
+      }
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -102,9 +101,9 @@
       max-width: 680px;
     }
 
-    /* ===== HEADER / NAV ===== */
+    /* ===== HEADER ===== */
     header {
-      background: rgba(10, 25, 47, 0.92);
+      background: rgba(10, 25, 47, 0.95);
       backdrop-filter: blur(12px);
       padding: 0.8rem 0;
       position: sticky;
@@ -132,6 +131,12 @@
 
     .logo:hover {
       color: #fbbf24;
+    }
+
+    .logo span {
+      font-weight: 300;
+      color: #ccd6f6;
+      font-size: 0.9rem;
     }
 
     .nav-links {
@@ -209,6 +214,19 @@
       border-radius: 4px;
     }
 
+    .section-badge {
+      display: inline-block;
+      background: #64ffda20;
+      color: #0a192f;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
     /* ===== HERO ===== */
     #hero {
       background: linear-gradient(145deg, #f0f9ff 0%, #dbeafe 100%);
@@ -231,13 +249,11 @@
     }
 
     @keyframes pulseGlow {
-
       0%,
       100% {
         transform: scale(1);
         opacity: 0.6;
       }
-
       50% {
         transform: scale(1.2);
         opacity: 1;
@@ -293,8 +309,32 @@
       line-height: 1.8;
     }
 
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats .stat {
+      text-align: center;
+    }
+
+    .hero-stats .stat .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0a192f;
+      display: block;
+    }
+
+    .hero-stats .stat .label {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
     .hero-cta {
-      margin-top: 2.2rem;
+      margin-top: 2rem;
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
@@ -352,7 +392,18 @@
       background: #0a192f;
       color: white;
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(10, 25, 47, 0.1);
+    }
+
+    .btn-success {
+      background: #10b981;
+      color: white;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-success:hover {
+      background: #059669;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(16, 185, 129, 0.4);
     }
 
     .hero-avatar {
@@ -377,59 +428,238 @@
     /* ===== SKILLS ===== */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.2rem;
       margin-top: 0.5rem;
     }
 
     .skill-item {
       background: white;
-      padding: 1.4rem 0.5rem;
+      padding: 1.2rem 0.5rem;
       text-align: center;
-      border-radius: 24px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
       border: 1px solid #eef3f8;
       transition: all 0.3s ease;
       font-weight: 500;
+      font-size: 0.85rem;
       color: #0a192f;
-      position: relative;
-      overflow: hidden;
     }
 
-    .skill-item::before {
+    .skill-item i {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.4rem;
+      color: #0a192f;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-6px);
+      border-color: #64ffda;
+      box-shadow: 0 12px 24px -8px rgba(10, 25, 47, 0.08);
+    }
+
+    .skill-item:hover i {
+      color: #2563eb;
+      transform: scale(1.1);
+    }
+
+    /* ================================================================
+       SERVICES SECTION - PROFESSIONAL WEBSITE BUILDER
+       ================================================================ */
+    #services {
+      background: linear-gradient(180deg, #f8faff 0%, #eef2f6 100%);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-header h2 {
+      display: inline-block;
+    }
+
+    .services-header h2:after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+    }
+
+    .services-header .section-sub {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2.5rem 2rem;
+      border: 1px solid #ecf1f7;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+
+    .service-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, #64ffda15, #3b82f615);
+      height: 4px;
+      background: linear-gradient(90deg, #64ffda, #3b82f6, #a78bfa);
       opacity: 0;
       transition: opacity 0.3s;
     }
 
-    .skill-item:hover::before {
+    .service-card:hover::before {
       opacity: 1;
     }
 
-    .skill-item i {
-      font-size: 2.4rem;
-      display: block;
-      margin-bottom: 0.5rem;
-      color: #0a192f;
-      transition: color 0.3s, transform 0.3s;
-      position: relative;
-    }
-
-    .skill-item:hover i {
-      color: #2563eb;
-      transform: scale(1.1) rotate(-4deg);
-    }
-
-    .skill-item:hover {
+    .service-card:hover {
       transform: translateY(-8px);
       border-color: #64ffda;
-      box-shadow: 0 16px 32px -12px rgba(10, 25, 47, 0.12);
+      box-shadow: 0 20px 40px -12px rgba(10, 25, 47, 0.1);
+    }
+
+    .service-card .icon-wrap {
+      width: 64px;
+      height: 64px;
+      background: #eaf4fc;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #0a192f;
+      margin-bottom: 1.2rem;
+      transition: background 0.3s;
+    }
+
+    .service-card:hover .icon-wrap {
+      background: #64ffda30;
+    }
+
+    .service-card .service-tag {
+      display: inline-block;
+      background: #64ffda20;
+      color: #0a192f;
+      padding: 0.15rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.3px;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      color: #0a192f;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      color: #475569;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card .price {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0a192f;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .service-card .price small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #64748b;
+    }
+
+    .service-card .features {
+      list-style: none;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .service-card .features li {
+      padding: 0.3rem 0;
+      color: #475569;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-card .features li i {
+      color: #10b981;
+      font-size: 0.8rem;
+    }
+
+    .service-card .btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* Service CTA Banner */
+    .service-cta-banner {
+      background: linear-gradient(135deg, #0a192f, #1a365d);
+      border-radius: 28px;
+      padding: 3rem 3.5rem;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-cta-banner::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(100, 255, 218, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .service-cta-banner .cta-content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+    }
+
+    .service-cta-banner .cta-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-cta-banner .cta-content p {
+      opacity: 0.8;
+      max-width: 500px;
+    }
+
+    .service-cta-banner .btn {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
     }
 
     /* ===== PROJECTS ===== */
@@ -473,77 +703,65 @@
     }
 
     .project-card h3 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 0.6rem;
       color: #0a192f;
     }
 
     .project-card p {
       color: #475569;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
       font-size: 0.95rem;
     }
 
     .project-tag {
       display: inline-block;
       background: #eaf4fc;
-      padding: 0.25rem 0.9rem;
-      border-radius: 40px;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
       font-size: 0.75rem;
       font-weight: 600;
       color: #0a192f;
       margin-right: 0.3rem;
       margin-bottom: 0.3rem;
-      transition: background 0.2s;
-    }
-
-    .project-tag:hover {
-      background: #64ffda40;
     }
 
     /* ===== EXPERIENCE ===== */
     .exp-timeline {
       display: flex;
       flex-direction: column;
-      gap: 1.8rem;
+      gap: 1.5rem;
     }
 
     .exp-item {
       display: flex;
       gap: 1.8rem;
       background: white;
-      padding: 2rem 2rem;
-      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      border-radius: 24px;
       border: 1px solid #ecf1f7;
       align-items: flex-start;
       flex-wrap: wrap;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
-      position: relative;
     }
 
     .exp-item:hover {
       border-color: #64ffda;
-      box-shadow: 0 12px 28px -12px rgba(10, 25, 47, 0.08);
+      box-shadow: 0 12px 28px -12px rgba(10, 25, 47, 0.06);
       transform: translateX(6px);
     }
 
     .exp-icon {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #0a192f;
-      min-width: 54px;
+      min-width: 50px;
       background: #eaf4fc;
-      width: 54px;
-      height: 54px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 16px;
-      transition: background 0.3s;
-    }
-
-    .exp-item:hover .exp-icon {
-      background: #64ffda30;
+      border-radius: 14px;
     }
 
     .exp-content {
@@ -551,7 +769,7 @@
     }
 
     .exp-content h3 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-bottom: 0.2rem;
       color: #0a192f;
     }
@@ -562,19 +780,18 @@
       background: #f0f6fe;
       padding: 0.1rem 0.8rem;
       border-radius: 30px;
-      font-size: 0.85rem;
-      margin-right: 0.5rem;
+      font-size: 0.8rem;
       display: inline-block;
+      margin-right: 0.5rem;
     }
 
     .exp-content .date {
       color: #64748b;
       font-size: 0.85rem;
-      font-weight: 500;
     }
 
     .exp-content p {
-      margin-top: 0.6rem;
+      margin-top: 0.5rem;
       color: #334155;
     }
 
@@ -591,31 +808,29 @@
     }
 
     .about-text p {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
       color: #1e293b;
       font-size: 1.05rem;
     }
 
     .about-highlight {
       background: white;
-      padding: 1.6rem 2.2rem;
-      border-radius: 28px;
+      padding: 1.5rem 2rem;
+      border-radius: 24px;
       border-left: 8px solid #fbbf24;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
       font-weight: 500;
       color: #0a192f;
     }
 
-    /* ================================================================
-       CONTACT SECTION - PROFESSIONAL FORM WITH DETAILS
-       ================================================================ */
+    /* ===== CONTACT ===== */
     .contact-wrapper {
       display: flex;
       flex-wrap: wrap;
       gap: 3rem;
       background: white;
       padding: 3rem;
-      border-radius: 36px;
+      border-radius: 32px;
       border: 1px solid #ecf1f7;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
     }
@@ -626,34 +841,24 @@
     }
 
     .contact-intro h3 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       color: #0a192f;
       margin-bottom: 1rem;
     }
 
     .contact-intro p {
       color: #475569;
-      font-size: 1.05rem;
+      font-size: 1rem;
       line-height: 1.8;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .contact-intro .highlight-box {
       background: #f0f9ff;
-      padding: 1.2rem 1.5rem;
+      padding: 1rem 1.5rem;
       border-radius: 16px;
       border-left: 4px solid #64ffda;
-      margin-top: 1.5rem;
-    }
-
-    .contact-intro .highlight-box i {
-      color: #0a192f;
-      margin-right: 10px;
-    }
-
-    .contact-intro .highlight-box span {
-      font-weight: 600;
-      color: #0a192f;
+      margin-top: 1rem;
     }
 
     .contact-form-wrapper {
@@ -662,27 +867,22 @@
     }
 
     .contact-form-wrapper .form-title {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 600;
       color: #0a192f;
       margin-bottom: 1.5rem;
     }
 
-    .contact-form-wrapper .form-title i {
-      color: #64ffda;
-      margin-right: 8px;
-    }
-
     .form-group {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .form-group label {
       display: block;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #0a192f;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
     }
 
     .form-group label .required {
@@ -693,9 +893,9 @@
     .form-group textarea,
     .form-group select {
       width: 100%;
-      padding: 0.9rem 1.2rem;
+      padding: 0.8rem 1.2rem;
       border: 2px solid #e2e8f0;
-      border-radius: 16px;
+      border-radius: 14px;
       font-size: 1rem;
       transition: all 0.25s ease;
       background: #fafcff;
@@ -713,20 +913,20 @@
     }
 
     .form-group textarea {
-      border-radius: 16px;
-      min-height: 130px;
+      border-radius: 14px;
+      min-height: 120px;
       resize: vertical;
     }
 
     .form-row {
       display: flex;
-      gap: 1.2rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
     .form-row .form-group {
       flex: 1;
-      min-width: 160px;
+      min-width: 150px;
     }
 
     .form-group select {
@@ -743,7 +943,7 @@
       padding: 1rem 2.5rem;
       border-radius: 50px;
       font-weight: 700;
-      font-size: 1.05rem;
+      font-size: 1rem;
       background: #0a192f;
       color: white;
       border: none;
@@ -762,13 +962,7 @@
       box-shadow: 0 12px 28px rgba(10, 25, 47, 0.2);
     }
 
-    .form-group .btn-submit i {
-      font-size: 1.1rem;
-    }
-
-    /* ================================================================
-       FOOTER - FULL WIDTH WITH SOCIAL ICONS & GRAPHICS
-       ================================================================ */
+    /* ===== FOOTER ===== */
     footer {
       background: #0a192f;
       color: #ccd6f6;
@@ -779,7 +973,6 @@
       width: 100%;
     }
 
-    /* Animated background graphic */
     footer::before {
       content: '';
       position: absolute;
@@ -805,13 +998,11 @@
     }
 
     @keyframes footerGlow {
-
       0%,
       100% {
         transform: translate(0, 0) scale(1);
         opacity: 0.5;
       }
-
       50% {
         transform: translate(30px, -20px) scale(1.3);
         opacity: 1;
@@ -819,13 +1010,11 @@
     }
 
     @keyframes footerGlow2 {
-
       0%,
       100% {
         transform: translate(0, 0) scale(1);
         opacity: 0.4;
       }
-
       50% {
         transform: translate(-20px, 30px) scale(1.4);
         opacity: 0.8;
@@ -848,7 +1037,7 @@
     .footer-social {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
       margin-bottom: 1.8rem;
     }
@@ -857,12 +1046,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 56px;
-      height: 56px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.04);
       color: #ccd6f6;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       transition: all 0.3s ease;
       border: 1px solid rgba(255, 255, 255, 0.06);
       position: relative;
@@ -899,7 +1088,7 @@
       color: #64ffda;
       padding: 0.2rem 0.8rem;
       border-radius: 8px;
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 600;
       opacity: 0;
       transition: all 0.25s ease;
@@ -933,12 +1122,10 @@
     }
 
     @keyframes heartBeat {
-
       0%,
       100% {
         transform: scale(1);
       }
-
       50% {
         transform: scale(1.2);
       }
@@ -982,6 +1169,16 @@
         font-size: 2rem;
       }
 
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-cta-banner {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        flex-direction: column;
+      }
+
       .contact-wrapper {
         padding: 1.8rem;
       }
@@ -1000,13 +1197,17 @@
       }
 
       .footer-social {
-        gap: 1.2rem;
+        gap: 1rem;
       }
 
       .footer-social a {
-        width: 48px;
-        height: 48px;
-        font-size: 1.2rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+      }
+
+      .hero-stats {
+        justify-content: center;
       }
     }
 
@@ -1023,8 +1224,12 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .contact-wrapper {
-        padding: 1.2rem;
+      .service-card {
+        padding: 1.8rem 1.2rem;
+      }
+
+      .service-cta-banner .cta-content h3 {
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -1035,10 +1240,11 @@
   <!-- ===== HEADER ===== -->
   <header>
     <nav class="container">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#" class="logo">NS.<span> WebWorks</span></a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -1050,221 +1256,317 @@
 
   <main>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO ===== -->
     <section id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <div class="badge"><i class="fas fa-code"></i> Web Developer</div>
-          <h1>Hi, I'm <span>Nihal Saini</span></h1>
+          <div class="badge"><i class="fas fa-rocket"></i> Professional Website Builder</div>
+          <h1>Build Your <span>Dream Website</span> Today</h1>
           <p>
-            <strong>Full-Stack Developer &amp; UI/UX Designer</strong> passionate about building modern, responsive, and
-            user-focused digital experiences. Skilled C, C++, HTML, CSS, JavaScript, SQL & Expert in
-            <strong>Python</strong>, and web technologies,
-            with a strong interest in artificial intelligence, problem-solving, and product development. Continuously
-            learning, building, and sharing knowledge through projects, content, and technology.
+            <strong>I build stunning, high-performance websites</strong> for businesses, portfolios, and e-commerce.
+            From concept to deployment — get a professional website that stands out and drives results.
           </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="number">50+</span>
+              <span class="label">Websites Built</span>
+            </div>
+            <div class="stat">
+              <span class="number">100%</span>
+              <span class="label">Client Satisfaction</span>
+            </div>
+            <div class="stat">
+              <span class="number">24/7</span>
+              <span class="label">Support</span>
+            </div>
+          </div>
+
           <div class="hero-cta">
-            <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Let's talk</a>
-            <a href="#projects" class="btn btn-outline">Explore work</a>
+            <a href="#services" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Services</a>
+            <a href="#contact" class="btn btn-outline"><i class="fas fa-calendar-check"></i> Book Now</a>
           </div>
         </div>
         <div class="hero-avatar">
-          <img src="assets/images/profile-img.jpeg" alt="Nihal Saini" class="float-anim" />
+          <img src="assets/images/profile-img.jpeg" alt="Nihal Saini - Website Builder" class="float-anim" />
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ================================================================
+    SERVICES SECTION - PROFESSIONAL WEBSITE BUILDER
+    ================================================================ -->
+    <section id="services">
+      <div class="container">
+        <div class="services-header">
+          <span class="section-badge"><i class="fas fa-bolt"></i> What I Offer</span>
+          <h2>Website Building Services</h2>
+          <p class="section-sub">Choose from my service catalog — each package designed to give you a professional,
+            high-quality website that meets your needs.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Basic Website -->
+          <div class="service-card">
+            <div class="icon-wrap"><i class="fas fa-globe"></i></div>
+            <span class="service-tag">🔥 Most Popular</span>
+            <h3>Basic Website</h3>
+            <p>Perfect for portfolios, small businesses, and personal brands. Clean, fast, and mobile-responsive.</p>
+            <div class="price">$499 <small>one-time</small></div>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> 5 Pages Custom Website</li>
+              <li><i class="fas fa-check"></i> Responsive Design (Mobile/Tablet)</li>
+              <li><i class="fas fa-check"></i> SEO Optimized</li>
+              <li><i class="fas fa-check"></i> Contact Form Integration</li>
+              <li><i class="fas fa-check"></i> 30 Days Free Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 2: Professional Website -->
+          <div class="service-card" style="border-color: #64ffda; box-shadow: 0 8px 24px rgba(100,255,218,0.1);">
+            <div class="icon-wrap" style="background: #64ffda30;"><i class="fas fa-briefcase"></i></div>
+            <span class="service-tag" style="background: #64ffda40;">⭐ Recommended</span>
+            <h3>Professional Website</h3>
+            <p>Advanced websites with custom features, CMS, and stunning UI/UX — ideal for growing businesses.</p>
+            <div class="price">$1,499 <small>one-time</small></div>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> 10 Pages Custom Website</li>
+              <li><i class="fas fa-check"></i> CMS Integration (WordPress/Strapi)</li>
+              <li><i class="fas fa-check"></i> Advanced SEO & Speed Optimization</li>
+              <li><i class="fas fa-check"></i> Custom Animations & Interactions</li>
+              <li><i class="fas fa-check"></i> Google Analytics Setup</li>
+              <li><i class="fas fa-check"></i> 60 Days Free Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-success">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 3: E-Commerce Website -->
+          <div class="service-card">
+            <div class="icon-wrap"><i class="fas fa-shopping-cart"></i></div>
+            <span class="service-tag">🚀 High ROI</span>
+            <h3>E-Commerce Website</h3>
+            <p>Full-featured online store with payment integration, product management, and secure checkout.</p>
+            <div class="price">$2,499 <small>one-time</small></div>
+            <ul class="features">
+              <li><i class="fas fa-check"></i> Custom E-Commerce Store</li>
+              <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+              <li><i class="fas fa-check"></i> Product Catalog Management</li>
+              <li><i class="fas fa-check"></i> Shopping Cart & Checkout</li>
+              <li><i class="fas fa-check"></i> Order Management System</li>
+              <li><i class="fas fa-check"></i> 90 Days Free Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service CTA Banner -->
+        <div class="service-cta-banner">
+          <div class="cta-content">
+            <h3>✨ Need a Custom Website?</h3>
+            <p>Not sure which package fits your needs? Let's talk and build a custom solution just for you.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="background: #64ffda; color: #0a192f;">Get Free Consultation</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
     <section id="skills">
       <div class="container">
-        <h2>Skills</h2>
-        <p class="section-sub">Combining technology, creativity, and problem-solving to build scalable products,
-          seamless user experiences, and meaningful digital solutions. </p>
+        <h2>Skills & Technologies</h2>
+        <p class="section-sub">Tools and technologies I use to build modern, high-quality websites.</p>
         <div class="skills-grid">
           <div class="skill-item"><i class="fab fa-python"></i> Python</div>
           <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
           <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
           <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
           <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-          <div class="skill-item"><i class="fas fa-c"></i> C</div>
-          <div class="skill-item"><i class="fas fa-code"></i> C++</div>
+          <div class="skill-item"><i class="fas fa-code"></i> C/C++</div>
           <div class="skill-item"><i class="fab fa-react"></i> React</div>
           <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
           <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
           <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
           <div class="skill-item"><i class="fas fa-code"></i> VS Code</div>
-          <div class="skill-item"><i class="fas fa-laptop-code"></i> PyCharm</div>
           <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
           <div class="skill-item"><i class="fab fa-figma"></i> Figma</div>
           <div class="skill-item"><i class="fas fa-paint-brush"></i> Canva</div>
           <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
           <div class="skill-item"><i class="fas fa-cloud"></i> Serverless</div>
           <div class="skill-item"><i class="fas fa-brain"></i> AI Expert</div>
+          <div class="skill-item"><i class="fas fa-wordpress"></i> WordPress</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===== PROJECTS ===== -->
     <section id="projects">
       <div class="container">
-        <h2>Projects</h2>
-        <p class="section-sub">A selection of projects that reflect my approach to clean code and thoughtful design.</p>
+        <h2>Recent Projects</h2>
+        <p class="section-sub">Some of the websites I've built for satisfied clients.</p>
         <div class="projects-grid">
           <div class="project-card">
-            <i class="fas fa-robot" style="font-size:2.2rem; color:#0a192f; margin-bottom:0.8rem;"></i>
-            <h3>AI Chatbot</h3>
-            <p>Intelligent conversational agent with a modern interface, built with Python, SQL, and React.</p>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">SQL</span>
-            <span class="project-tag">C</span>
-            <span class="project-tag">JavaScript</span>
+            <i class="fas fa-store" style="font-size:2rem; color:#0a192f; margin-bottom:0.8rem;"></i>
+            <h3>EcoStore</h3>
+            <p>Complete e-commerce website for sustainable products with payment integration.</p>
             <span class="project-tag">React</span>
-          </div>
-          <div class="project-card">
-            <i class="fas fa-shopping-cart" style="font-size:2.2rem; color:#0a192f; margin-bottom:0.8rem;"></i>
-            <h3>E‑Commerce Store</h3>
-            <p>Responsive e‑shopping platform with dynamic product browsing and seamless shopping journey.</p>
-            <span class="project-tag">HTML</span>
-            <span class="project-tag">CSS</span>
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">Python</span>
             <span class="project-tag">Node.js</span>
+            <span class="project-tag">Stripe</span>
           </div>
           <div class="project-card">
-            <i class="fas fa-blog" style="font-size:2.2rem; color:#0a192f; margin-bottom:0.8rem;"></i>
-            <h3>Blog Website</h3>
-            <p>Clean, content‑first blog with smooth navigation and thoughtful typography for all devices.</p>
+            <i class="fas fa-blog" style="font-size:2rem; color:#0a192f; margin-bottom:0.8rem;"></i>
+            <h3>TechBlog Hub</h3>
+            <p>Modern blog platform with CMS, SEO optimization, and newsletter integration.</p>
+            <span class="project-tag">WordPress</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">Tailwind</span>
+          </div>
+          <div class="project-card">
+            <i class="fas fa-handshake" style="font-size:2rem; color:#0a192f; margin-bottom:0.8rem;"></i>
+            <h3>Portfolio Pro</h3>
+            <p>Professional portfolio website for a creative agency with custom animations.</p>
             <span class="project-tag">HTML</span>
             <span class="project-tag">CSS</span>
-            <span class="project-tag">SQL</span>
-            <span class="project-tag">React</span>
-            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">JavaScript</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===== EXPERIENCE ===== -->
     <section id="experience">
       <div class="container">
         <h2>Experience</h2>
-        <p class="section-sub">Where I've applied my skills to build products and deliver measurable impact.</p>
+        <p class="section-sub">My journey as a professional website builder.</p>
         <div class="exp-timeline">
           <div class="exp-item">
             <div class="exp-icon"><i class="fas fa-code"></i></div>
             <div class="exp-content">
-              <h3>Self-Directed Developer</h3>
-              <span class="company">Freelancer</span>
-              <span class="date">2024 – Present</span>
-              <p>
-              <ul>
-                <li>Building and maintaining personal web development projects</li>
-                <li>Learning modern Full-Stack technologies and development workflows</li>
-                <li>Practicing problem-solving through real-world implementations</li>
-                <li>Exploring UI/UX design principles and AI-powered solutions</li>
-                <li>Continuously improving software engineering skills</li>
-              </ul>
-              </p>
+              <h3>Professional Website Builder</h3>
+              <span class="company">Freelance · Global</span>
+              <span class="date">2022 – present</span>
+              <p>Built 50+ websites for clients worldwide. Specializing in custom solutions, e-commerce, and
+                high-performance web applications.</p>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+            <div class="exp-content">
+              <h3>Web Development Consultant</h3>
+              <span class="company">TechStart Inc.</span>
+              <span class="date">2021 – 2022</span>
+              <p>Provided web development consulting for startups, helping them establish online presence and scale their
+                digital operations.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ===== ABOUT ===== -->
     <section id="about">
       <div class="container about-wrap">
         <div class="about-text">
           <h2>About Me</h2>
-          <p>I'm Nihal Saini, a full‑stack developer with a deep appreciation for both the art of design and the science
-            of code. I believe that the best digital products are built at the intersection of empathy and engineering.
-          </p>
-          <p>With a foundation in computer science and a self‑driven passion for modern web technologies, I've worked
-            with
-            startups and agencies to bring ideas to life. I thrive on solving complex problems and crafting interfaces
-            that feel intuitive and alive.</p>
+          <p>Hi, I'm <strong>Nihal Saini</strong> — a professional website builder with a passion for creating stunning,
+            high-performance websites that help businesses grow.</p>
+          <p>I believe every business deserves a website that looks great, works flawlessly, and drives real results.
+            That's why I combine modern design with solid engineering to deliver websites that actually work for you.</p>
           <div class="about-highlight">
             <i class="fas fa-quote-left" style="color:#fbbf24; margin-right:8px;"></i>
-            I'm committed to continuous learning, open‑source collaboration, and building with a human‑centered
-            approach.
-            Every line of code is an opportunity to make someone's day better.
+            Your website is your digital storefront. I make sure it's beautiful, fast, and converts visitors into
+            customers.
           </div>
-          <p style="margin-top:1.8rem;"><i class="fas fa-map-pin" style="color:#0a192f; margin-right:8px;"></i> Based in
-            India · open to remote collaborations and exciting projects.</p>
+          <p style="margin-top:1.5rem;"><i class="fas fa-map-pin" style="color:#0a192f; margin-right:8px;"></i> Based in
+            India · Serving clients globally</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- ===== CONTACT ===== -->
     <section id="contact">
       <div class="container">
-        <h2>Let's Connect</h2>
-        <p class="section-sub">Have a project in mind or want to collaborate? Let's talk and bring your ideas to life.
-        </p>
+        <h2>Let's Build Your Website</h2>
+        <p class="section-sub">Ready to get started? Fill out the form and I'll get back to you within 24 hours.</p>
 
         <div class="contact-wrapper">
-          <!-- Left Side - Intro -->
           <div class="contact-intro">
-            <h3>Start a Conversation</h3>
+            <h3>🚀 Start Your Project</h3>
             <p>
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              Whether you need a full-stack web application, a stunning UI/UX design, or just want to connect — I'd love
-              to hear from you.
+              Tell me about your website needs — whether it's a portfolio, business website, or an online store.
+              I'll help you build something amazing.
             </p>
             <p>
-              Fill out the form with your details and I'll get back to you within <strong>24 hours</strong>.
+              <strong>What to expect:</strong><br />
+              ✅ Custom design tailored to your brand<br />
+              ✅ Mobile-responsive & SEO-optimized<br />
+              ✅ Fast loading & secure<br />
+              ✅ Ongoing support after launch
             </p>
-
             <div class="highlight-box">
-              <i class="fas fa-clock"></i>
-              <span>Quick Response:</span> I reply to every message within 24 hours. Your time is valuable.
+              <i class="fas fa-clock" style="margin-right:8px;"></i>
+              <strong>Quick Response:</strong> I reply to every message within 24 hours.
             </div>
-
-            <div class="highlight-box" style="border-left-color: #3b82f6; margin-top: 0.8rem;">
-              <i class="fas fa-rocket"></i>
-              <span>Let's Build Together:</span> From concept to deployment — I'm here to help you succeed.
+            <div class="highlight-box" style="border-left-color: #3b82f6; margin-top:0.8rem;">
+              <i class="fas fa-rocket" style="margin-right:8px;"></i>
+              <strong>Let's Build Together:</strong> Your dream website is just a message away.
             </div>
           </div>
 
-          <!-- Right Side - Form -->
           <div class="contact-form-wrapper">
-            <div class="form-title"> Send your massage</div>
+            <div class="form-title">
+              <i class="fas fa-pen-fancy"></i> Get a Quote
+            </div>
 
             <form id="contactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label>Full Name <span class="required">*</span></label>
-                  <input type="text" placeholder="Enter Your Name" required />
+                  <input type="text" placeholder="Your full name" required />
                 </div>
                 <div class="form-group">
                   <label>Email Address <span class="required">*</span></label>
-                  <input type="email" placeholder="you@example.com" required />
+                  <input type="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" placeholder="+91 98765 43210" />
+                </div>
+                <div class="form-group">
+                  <label>Project Type <span class="required">*</span></label>
+                  <select required>
+                    <option value="">Select...</option>
+                    <option value="basic">Basic Website</option>
+                    <option value="professional">Professional Website</option>
+                    <option value="ecommerce">E-Commerce Website</option>
+                    <option value="custom">Custom Project</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
               </div>
 
               <div class="form-group">
-                <label>Subject<span class="required">*</span></label>
-                <select required>
-                  <option value="default">Select a topic...</option>
-                  <option value="project">New Project</option>
-                  <option value="collaboration">Collaboration</option>
-                  <option value="freelance">Freelance Opportunity</option>
-                  <option value="job">Job</option>
-                  <option value="interview">Interview</option>
-                  <option value="suggestion">Suggestion</option>
-                  <option value="feedback">Feedback</option>
-                  <option value="others">Others</option>
+                <label>Budget Range</label>
+                <select>
+                  <option value="">Select budget...</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000-2000">$1,000 - $2,000</option>
+                  <option value="2000-3000">$2,000 - $3,000</option>
+                  <option value="3000+">$3,000+</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label>Your Message <span class="required">*</span></label>
-                <textarea placeholder="Tell me about your project, idea, or question in detail..." required></textarea>
+                <label>Project Details <span class="required">*</span></label>
+                <textarea placeholder="Tell me about your website requirements, goals, and any specific features you need..." required></textarea>
               </div>
 
               <div class="form-group">
                 <button type="submit" class="btn-submit">
-                  <i class="fas fa-paper-plane"></i> Send Message
+                  <i class="fas fa-paper-plane"></i> Send Request
                 </button>
               </div>
             </form>
@@ -1275,7 +1577,7 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -1290,7 +1592,7 @@
             <i class="fab fa-linkedin-in"></i>
             <span class="tooltip">LinkedIn</span>
           </a>
-          <a href="https://x.com/nihalsainee" target="_blank" aria-label="Twitter / X">
+          <a href="https://x.com/nihalsainee" target="_blank" aria-label="Twitter">
             <i class="fab fa-twitter"></i>
             <span class="tooltip">Twitter / X</span>
           </a>
@@ -1305,9 +1607,10 @@
         </div>
 
         <div class="footer-bottom">
-          &copy; 2026 <strong>Nihal Saini</strong> &nbsp;·&nbsp; crafted with
-          <span class="heart"><i class="fas fa-heart"></i></span>
-          &nbsp;·&nbsp; <span style="opacity:0.6;">Full-Stack Developer &amp; UI/UX Designer</span>
+          &copy; 2026 <strong>Nihal Saini</strong> &nbsp;·&nbsp; Professional Web Developer
+          <span style="display:block; margin-top:4px; opacity:0.5; font-size:0.8rem;">
+            crafted with <span class="heart"><i class="fas fa-heart"></i></span> &nbsp;·&nbsp; Serving clients worldwide
+          </span>
         </div>
       </div>
     </div>
@@ -1330,9 +1633,9 @@
     });
 
     // Contact form handler
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('✅ Thank you for your message!\n\nI\'ll get back to you within 24 hours.\n\n— Nihal Saini');
+      alert('✅ Thank you for your website building request!\n\nI\'ll review your requirements and get back to you within 24 hours.\n\n— Nihal Saini');
       this.reset();
     });
   </script>
